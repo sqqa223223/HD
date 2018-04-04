@@ -7,8 +7,9 @@ require.config({
 	}
 })
 //代码的出入口，相当于c语言中的main函数
-require(['jquery','cookie'],function($,cookie){
+require(['jquery','cookie','index'],function($,cookie,index){
 	$(function(){
-		
+		//友情链接效果
+		index.linkRun();
 	})
 })
