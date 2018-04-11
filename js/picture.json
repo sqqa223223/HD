@@ -1,0 +1,24 @@
+{
+	"groups":[
+				{
+					"goodType":"春秋_01",
+					"goodInfo":[
+								{
+									"src":"../img/hd_01.jpg",
+									"newPrice":48,
+									"oldPrice":48
+								},
+								{
+									"src":"../img/hd_01.jpg",
+									"newPrice":48,
+									"oldPrice":48
+								},
+								{
+									"src":"../img/hd_01.jpg",
+									"newPrice":48,
+									"oldPrice":48
+								}
+								]	
+				}
+			]
+}

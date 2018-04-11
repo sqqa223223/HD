@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<link rel="stylesheet" href="../css/login.min.css" />
+		<script type="text/javascript" defer async="true" data-main="../js_login/main" src="../js_login/require.js"></script>
+	</head>
+	<body>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="main">
+			<div class="left">
+				<img src="../img/410-290.png" alt="" />
+			</div>
+			<div class="right">
+				<div class="form">
+					<h2>用户登录</h2>
+					<ul>
+						<li>
+							<label for="name">用户名：</label>
+							<input type="text" value="邮箱地址/手机号" name="name" class="name" id="tel_email"/>
+						</li>
+						<li>
+							<label for="psd">密码：</label>
+							<input type="password" name="psd" class="psd" id="psd"/>
+						</li>
+						<li>
+							<label for="yzm">验证码：</label>
+							<input type="text" name="yzm" class="yzm" id="yzm_val"/>
+							<i id="yzm_tel" ></i><i id="yzmInfo_tel"></i>
+						</li>
+						<li>
+							<input type="button" value="立即登录" class="btn" id="login"/>
+							<div class="message"><input type="checkbox" class="squ"/>保存登录信息</div>
+						</li>
+						<li class="login">
+							<a href="register.html" target="_blank">注册</a>
+							<span></span><a href="#">忘记密码？</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ways">
+					<p>其他登录方式：</p><a href="#"><span></span></a><a href="#"><span></span></a><a href="#"><span></span></a><a href="#"><span></span></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>

@@ -1,0 +1,423 @@
+@import "public";
+#cart_header{
+    width:1200px;
+    height: 46px;
+    margin: 0 auto;
+    font-family: simsun;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    .cart_logo{
+        float: left;
+        width: 414px;
+        height: 44px;
+        display: inline-block;
+        background: url(../img/cart_img.png) no-repeat -15px -17px;
+    }
+    .cart_step{
+        width: 700px;
+        height: 31px;
+        margin: 15px 2px 0;
+        background: url(../img/cart_img.png) no-repeat -15px -88px;
+        display: inline-block;
+        float: right;
+    }
+}
+
+#cart_wrap {
+    width: 1200px;
+//  height: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 5px 0;
+    font: 12px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;
+    #warm_tip {
+        margin-bottom: -8px;
+        width: 429px;
+        height: 28px;
+        text-indent: 7px;
+        font-family: 宋体;
+        line-height: 25px;
+        background: url(../img/warm.png) no-repeat;
+        em{
+            color: #fe0032;
+            font-style: normal;
+            font-weight: 500;
+        }
+        a{
+            color: #fe0032;
+        }
+    }
+    #shopping_nr {
+        width: 1198px;
+        float: left;
+        margin: 10px 0 0 0;
+        padding: 0 0 10px;
+        .shopping_nr_title {
+            width: 1198px;
+            height: 36px;
+            line-height: 36px;
+            background: url(../img/cartbar2.png) no-repeat;
+            float: left;
+            .shop_qx {
+                float: left;
+                font-family: 'Microsoft YaHei';
+                font-size: 12px;
+                text-align: center;
+                font-size: 13px;
+            }
+        }
+        .shopping_nr_top {
+            background: #fcfcfc;
+            border: #d9d8d8 1px solid;
+            border-top: none;
+            margin: 0;
+            float: left;
+            width: 99.9%;
+            h3 {
+                width: 98.2%;
+                float: left;
+                height: 40px;
+                line-height: 55px;
+                font-size: 14px;
+                padding-left: 20px;
+                color: rgb(51, 51, 51);
+                font-family: 微软雅黑;
+                background: rgb(255, 255, 255);
+            }
+            ul {
+                margin-bottom: 20px;
+                padding: 0;
+                overflow: hidden;
+                float: left;
+                width: 100%;
+                li {
+                    height: auto;
+                    border-bottom: #eaeaea 1px solid;
+                    font-family: 'Microsoft YaHei';
+                    float: left;
+                }
+                .cbg {
+                    float: left;
+                    text-align: center;
+                    height: 132px;
+                    font-size: 12px;
+                    background: url(../img/shopping_car_bg.png) no-repeat right;
+                }
+                .shop_product {
+                    width: 367px;
+                    height: auto;
+                    margin-left: 15px;
+                    padding-bottom: 10px;
+                    text-align: left;
+                    .shop_product_pic {
+                        float: left;
+                        width: 112px;
+                        height: auto;
+                        border: #ddd 1px solid;
+                        margin: 10px 0 0 0;
+                        img{
+                            width: 114px;
+                            height: 114px;
+                        }
+                    }
+                    .shop_product_name {
+                        margin: 40px 0 0 10px;
+                        float: left;
+                        display: inline;
+                        width: 243px;
+                        overflow: hidden;
+                        font-size: 14px;
+                    }
+                    .shop_product_size {
+                        width: 243px;
+                        height: 18px;
+                        margin: 10px 0 0 10px;
+                        float: left;
+                    }
+                }
+                .shop_product_money{
+                    width: 132px;
+                    .cprice {
+                        padding: 50px 0;
+                        line-height: 20px;
+                    }
+                }
+                .shop_product_number{
+                    width: 132px;
+                    .amount-widget {
+                        position: relative;
+                        display: inline-block;
+                        margin: 51px 0;
+                        .increase, .decrease{
+                            width: 14px;
+                            height: 14px;
+                            line-height: 14px;
+                            float: left;
+                            line-height: 12px;
+                            text-align: center;
+                            cursor: pointer;
+                            border: 1px solid #a7a6ab;
+                            position: absolute;
+                            margin: 7px 0;
+                        }
+                        .increase {
+                            right: -20px;
+                        }
+                        .decrease {
+                            left: -20px;
+                        }
+                         input {
+                            width: 36px;
+                            height: 20px;
+                            line-height: 20px;
+                            margin-top: 3px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                            color: #444;
+                        }
+                    }
+                }
+                .shop_product_money00 {
+                    width: 122px;
+                    font-size: 14px;
+                    color: #bf0000;
+                    line-height: 132px;
+                }
+                .shop_product_close {
+                    width: 134px;
+                    font-size: 12px;
+                    .middle {
+                        padding: 50px 0;
+                    }
+                }
+                .shop_product_tip {
+                    background: none;
+                    width: 184px;
+                    .middle {
+                        padding: 40px 10px 0 10px;
+                    }
+                }
+                
+            }
+        }
+        .shopping_car_bottom {
+            width: 1196px;
+            float: left;
+            min-height: 45px;
+            height: auto;
+            line-height: 26px;
+            border: solid 1px #ddd;
+            border-top: none;
+            .shopping_car_arrow {
+                width: 502px;
+                height: 108px;
+                margin: 20px auto;
+                overflow: hidden;
+                .car_arrow {
+                    background: url(../img/gouwuc.png) no-repeat 0 0;
+                    width: 72px;
+                    height: 89px;
+                    float: left;
+                }
+                .car_arrow_txt {
+                    float: left;
+                    width: 80%;
+                    margin: 25px 0 0 20px;
+                    .car_arrow_warn {
+                        font-size: 18px;
+                        font-family: 'Microsoft YaHei';
+                        color: #333333;
+                    }
+                    .go_shopping {
+                        color: #c80a28;
+                        font-size: 14px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .shopping_car_bottom_right {
+                float: right;
+                margin-right: 10px;
+                height: auto;
+                width: 300px;
+                .accumulated {
+                    margin: 10px 0;                   
+                    float: right;
+                    display: inline;
+                    table tr td{
+                        text-align: right;
+                        .p_color {
+                            color: rgb(255, 0, 50);
+                            font-family: 微软雅黑;
+                        }
+                    }
+                    .td_len1 {
+                        width: 60px;
+                    }
+                    .td_len {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+        .shopping_car_bottom_bg{
+            background: #fdfdfd;
+            .shopping_car_bottom_right .shopping_car_bottom_rightMoney {
+                float: right;
+                right: 20px;
+                height: 20px;
+                font: 18px/20px 'Microsoft YaHei';
+                span {
+                    font: 14px/20px 'Microsoft YaHei';
+                    #totalAmount {
+                        font: 22px/30px 'Microsoft YaHei';
+                        color: #bf0000;
+                    }
+                }
+            }
+        }
+        .continue_shopping{
+            display: inline-block;
+            float: left;
+            width: 119px;
+            height: 36px;
+            margin-top: 10px;
+            background: url(../img/cart_img.png) no-repeat -16px -747px;
+        }
+        .pay{
+            width: 157px;
+            height: 36px;
+            margin-top: 10px;
+            display: inline-block;
+            float: right;
+            background: url(../img/cart_img.png) no-repeat -16px -361px;
+        }
+    }
+    #div_deleted {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding-top: 20px;
+        margin: 30px 0;
+        h1 {
+            border-bottom: solid 1px #ddd;
+            padding-bottom: 5px;
+        }
+    }
+    #shopping_order_title{
+        width: 100%;
+        height: 35px;
+        background: #d8d7d7;
+        text-indent: 15px;
+        font-size: 16px;
+        line-height: 35px;
+        position: relative;
+        span{
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            a{
+                float: left;
+                display: block;
+                width: 140px;
+                height: 26px;
+                background: #FFF;
+                color: #8a8a8a;
+                text-align: center;
+                font-size: 14px;
+                line-height: 26px;
+            }
+            .current{
+                background: #8a8a8a;
+                color: #FFF;
+            }
+        }
+    }
+    #slides {
+        position: relative;
+        padding: 10px 40px;
+        width: 1200px;
+        margin-bottom: 10px;
+        border: 1px solid #DDD;        
+        .slides_container {
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            .slides_control{
+                position: relative;
+                width: 3660px;
+                height: 240px;
+                left: -1220px;
+                .slide{
+                    position: absolute;
+                    top: 0px;
+                    left: 1220px;
+                    z-index: 5;
+                    display: block;
+                    width: 1220px;
+                    height:240px;
+                    .item {
+                        float: left;
+                        margin: 10px 0;
+                        margin-right: 7px;
+                        width: 180px;
+                        height: auto;
+                        a {
+                            max-height: 180px;
+                            overflow: hidden;
+                            height: auto;
+                            display: block;
+                            img{
+                                width: 180px;
+                                height: 180px;
+                            }
+                        }
+                         p {
+                            overflow: hidden;
+                            margin: 0;
+                            width: 100%;
+                            height: 22px;
+                            font: 12px/22px "microsoft yahei";
+                            .price {
+                                color: #ca0a2a;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .prev, .next {
+            display: none;
+            position: absolute;
+            top: 100px;
+            z-index: 99;
+            width: 32px;
+            height: 32px;
+            background: url(../img/cart_img.png) no-repeat;
+            text-indent: -9999px;
+        }
+        .prev {
+            left: 4px;
+            background-position: -280px -275px;
+        }
+        .next {
+            right: 4px;
+            background-position: -347px -275px;
+        }
+    }
+}
+#shopping_car_bottom_bg{
+    display: none;
+}
+#shopping_car_bottom_right{
+    display: none;
+}
+#cartGoodsList{
+    display: none;
+}
+
