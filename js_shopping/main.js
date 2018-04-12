@@ -133,11 +133,6 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 				$("#rec-6891505 .shop_product_close .delete").click(function(){
 					//在页面上将商品信息删除，顺便获取一个该商品的id
 					var id = $(this).parents("#brand_cart_1").remove().attr("good_id");
-					var num = $("#J_AmountWidget input").val();
-					$("#goods_allnum").html(num);
-					var money = $("#shop_product_money00").html();
-					$("#total_Price01").html(money);
-					$("#totalAmount").html(money);
 					//从cookie中将该商品删除,否则刷新页面时还会出现
 					var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
 					var cartObj = convertCartStrToObj(cartStr);
@@ -148,6 +143,18 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 						expires: 7,
 						path: "/"
 					});
+					//重新获取小计和数量相加
+					var $moneys = $(".shop_product_money00 span");
+					var $nums = $("#J_AmountWidget input");
+
+					var money = 0,num=0;
+					for(var i = 0; i < $moneys.size(); i++){
+						money += parseInt($moneys.eq(i).html());
+						num += parseInt($nums.eq(i).val());
+					}
+					$("#total_Price01").html(money);
+					$("#totalAmount").html(money);
+					$("#goods_allnum").html(num);
 				})
 				
 				//给增加按钮添加点击事件
@@ -158,19 +165,26 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 					cartObj[id].num += 1;
 					//将页面上显示的数量加1
 					$(this).siblings("input").val("" + cartObj[id].num);
-					var num = $("#J_AmountWidget input").val();
-					$("#goods_allnum").html(num);
 					
 					//更新页面的小计
 					$(this).parents(".cbg").siblings('.shop_product_money00').children().html(cartObj[id].num * cartObj[id].newPrice + "");
-					var money = $("#shop_product_money00").html();
-					$("#total_Price01").html(money);
-					$("#totalAmount").html(money);
+					
 					//将信息放回cookie
 					$.cookie('cart', convertObjToCartStr(cartObj), {
 						expires: 7,
 						path: "/"
 					});
+					
+					var $moneys = $(".shop_product_money00 span");
+					var $nums = $("#J_AmountWidget input");
+					var money = 0,num = 0;
+					for(var i = 0; i < $moneys.size(); i++){
+						money += parseInt($moneys.eq(i).html());
+						num += parseInt($nums.eq(i).val());
+					}
+					$("#total_Price01").html(money);
+					$("#totalAmount").html(money);
+					$("#goods_allnum").html(num);
 				})
 				//给减少按钮添加事件
 				$("#J_AmountWidget .decrease").click(function(){
@@ -181,8 +195,7 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 						cartObj[id].num -= 1;
 						//将页面上显示的数量加1
 						$(this).siblings("input").val("" + cartObj[id].num);
-						var num = $("#J_AmountWidget input").val();
-						$("#goods_allnum").html(num);
+						
 						//更新页面的小计
 						$(this).parents(".cbg").siblings('.shop_product_money00').children().html(cartObj[id].num * cartObj[id].newPrice + "");
 						var money = $("#shop_product_money00").html();
@@ -193,6 +206,17 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 							expires: 7,
 							path: "/"
 						});
+						//重新获取小计相加
+						var $moneys = $(".shop_product_money00 span");
+						var $nums = $("#J_AmountWidget input");
+						var money = 0,num = 0;
+						for(var i = 0; i < $moneys.size(); i++){
+							money += parseInt($moneys.eq(i).html());
+							num += parseInt($nums.eq(i).val());
+						}
+						$("#total_Price01").html(money);
+						$("#totalAmount").html(money);
+						$("#goods_allnum").html(num);
 					}
 				});
 				//修改数量
@@ -210,8 +234,7 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 						cartObj[id].num = parseInt($(this).val());
 					}
 					$(this).val("" + cartObj[id].num);
-					var num = $("#J_AmountWidget input").val();
-					$("#goods_allnum").html(num);
+					
 					//更新页面的小计
 					$(this).parents(".cbg").siblings('.shop_product_money00').children().html(cartObj[id].num * cartObj[id].newPrice + "");
 					//将信息放回cookie
@@ -219,6 +242,16 @@ require(['jquery','cookie','shopping'],function($,cookie,shopping){
 						expires: 7,
 						path: "/"
 					});
+					var $moneys = $(".shop_product_money00 span");
+					var $nums = $("#J_AmountWidget input");
+					var money = 0, num = 0;
+					for(var i = 0; i < $moneys.size(); i++){
+						money += parseInt($moneys.eq(i).html());
+						num += parseInt($nums.eq(i).val());
+					}
+					$("#total_Price01").html(money);
+					$("#totalAmount").html(money);
+					$("#goods_allnum").html(num);
 				})	
 			}
 		function convertCartStrToObj(cartStr){
